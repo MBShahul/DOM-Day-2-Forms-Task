@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form and Table Example</title>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1 id="title">Data Entry Form</h1>
+    <p id="description">Please fill out the following form to submit your details. All fields are required.</p>
+    <form id="survey-form" class="survey-form">
+      <div class="form-group">
+        <label for="firstName" id="name-label">First Name:</label>
+        <input type="text" id="first-name" name="firstName" class="input-field" placeholder="Enter Your First Name" required>
+      </div>
+
+      <div class="form-group">
+        <label for="lastName" id="name-label">Last Name:</label>
+        <input type="text" id="last-name" name="lastName" class="input-field" placeholder="Enter Your Last Name" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email" id="email-label">Email:</label>
+        <input type="email" id="email" name="email" class="input-field" placeholder="Enter Your Email" required>
+      </div>
+
+      <div class="form-group">
+        <label for="address">Address:</label>
+        <input type="text" id="address" name="address" class="input-field" required>
+      </div>
+
+      <div class="form-group">
+        <label for="pincode" id="number-label">Pincode:</label>
+        <input type="text" id="pincode" name="pincode" class="input-field" required>
+      </div>
+
+      <div class="form-group">
+        <label for="gender">Gender:</label>
+        <select id="gender" name="gender" class="input-field" required>
+          <option value="">Select Gender</option>
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+          <option value="Other">Other</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Choice of Food (Choose at least 2):</label><br>
+        <div class="checkbox-group">
+          <input type="checkbox" id="food1" name="food" value="Idly"> Idly
+          <input type="checkbox" id="food2" name="food" value="Dosa"> Dosa
+          <input type="checkbox" id="food3" name="food" value="Pongal"> Pongal
+          <input type="checkbox" id="food4" name="food" value="Poori"> Poori
+          <input type="checkbox" id="food5" name="food" value="Parotta"> Parotta
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="state">State:</label>
+        <input type="text" id="state" name="state" class="input-field" required>
+      </div>
+
+      <div class="form-group">
+        <label for="country">Country:</label>
+        <input type="text" id="country" name="country" class="input-field" required>
+      </div>
+
+      <div class="form-group">
+        <label for="comments">Additional Comments:</label>
+        <textarea id="comments" name="comments" class="input-field" rows="4" required></textarea>
+      </div>
+
+      <div class="form-group">
+        <label>Preferred Contact Method:</label><br>
+        <input type="radio" id="contactEmail" name="contactMethod" value="Email"> Email
+        <input type="radio" id="contactPhone" name="contactMethod" value="Phone"> Phone
+      </div>
+
+      <div class="form-group">
+        <label>Preferred Time of Day:</label><br>
+        <input type="radio" id="timeMorning" name="timeOfDay" value="Morning"> Morning
+        <input type="radio" id="timeAfternoon" name="timeOfDay" value="Afternoon"> Afternoon
+        <input type="radio" id="timeEvening" name="timeOfDay" value="Evening"> Evening
+      </div>
+
+      <button type="submit" id="submit" class="btn">Submit</button>
+    </form>
+
+    <h2>Submitted Data</h2>
+    <div class="table-container">
+      <table id="dataTable">
+        <thead>
+          <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Email</th>
+            <th>Address</th>
+            <th>Pincode</th>
+            <th>Gender</th>
+            <th>Food Choices</th>
+            <th>State</th>
+            <th>Country</th>
+            <th>Comments</th>
+            <th>Contact Method</th>
+            <th>Time of Day</th>
+          </tr>
+        </thead>
+        <tbody>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <script src="./js/script.js"></script>
+  <script src="https://app.zenclass.in/sheets/v1/js/zen/suite/bundle.js"></script>
+</body>
+</html>
