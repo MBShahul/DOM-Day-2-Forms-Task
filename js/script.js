@@ -2,7 +2,6 @@ document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('survey-form').addEventListener('submit', function(event) {
       event.preventDefault();
   
-      // Get form values
       const firstName = document.getElementById('first-name').value;
       const lastName = document.getElementById('last-name').value;
       const email = document.getElementById('email').value;
@@ -10,7 +9,6 @@ document.addEventListener('DOMContentLoaded', function() {
       const pincode = document.getElementById('pincode').value;
       const gender = document.getElementById('gender').value;
   
-      // Get selected food choices
       const foodChoices = [];
       document.querySelectorAll('input[name="food"]:checked').forEach(checkbox => {
         foodChoices.push(checkbox.value);
@@ -25,11 +23,9 @@ document.addEventListener('DOMContentLoaded', function() {
       const country = document.getElementById('country').value;
       const comments = document.getElementById('comments').value;
   
-      // Get selected contact method and time of day
       const contactMethod = document.querySelector('input[name="contactMethod"]:checked').value;
       const timeOfDay = document.querySelector('input[name="timeOfDay"]:checked').value;
   
-      // Create a new row and cells
       const table = document.getElementById('dataTable').getElementsByTagName('tbody')[0];
       const newRow = table.insertRow();
   
@@ -46,7 +42,6 @@ document.addEventListener('DOMContentLoaded', function() {
       const contactMethodCell = newRow.insertCell(10);
       const timeOfDayCell = newRow.insertCell(11);
   
-      // Insert values into cells
       firstNameCell.textContent = firstName;
       lastNameCell.textContent = lastName;
       emailCell.textContent = email;
